@@ -3,6 +3,7 @@ import { MarvelPage, DcPage, SearchPage, HeroPage, loaderHero } from '../heroes'
 import { LoginPage } from '../auth';
 import ErrorPage from '../ErrorPage';
 import { RootLayout } from '../layouts';
+import { PublicRoute } from './PublicRoute';
 
 export const router = createBrowserRouter([
     {
@@ -31,7 +32,11 @@ export const router = createBrowserRouter([
     },
     {
       path: 'login',
-      element: <LoginPage />
+      element: (
+        <PublicRoute>
+          <LoginPage />
+        </PublicRoute>
+      )
     }
     
   ]);
