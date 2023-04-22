@@ -16,9 +16,11 @@ export const HeroCard = ({
   return (
     <div className={ style['card'] }> 
         <div className={ style['card-img'] }>
-            <img src={ heroImg } alt={ superhero } />
+            <img 
+              className='animate__animated animate__jackInTheBox'
+              src={ heroImg } alt={ superhero } />
         </div>
-        <div className={ style['card-body'] }>
+        <div className={ `${style['card-body']} animate__animated animate__zoomInRight` }>
             <h5>{ superhero }</h5>
             <p>{ alter_ego }</p>
 

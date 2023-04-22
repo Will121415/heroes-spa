@@ -17,9 +17,12 @@ export const HeroPage = () => {
   return (
     <div className={ style['hero-detail'] }>
       <div className={ style['hero-img'] }>
-        <img src={`/assets/${ id }.jpg`} alt={ superhero } />
+        <img 
+          className='animate__animated animate__bounceInUp'
+          src={`/assets/${ id }.jpg`} alt={ superhero } 
+        />
       </div>
-      <div className={ style['hero-body'] }>
+      <div className={ `${style['hero-body']} animate__animated animate__bounceInDown` }>
         <h2>{ superhero }</h2>
         <ul>
           <li>{ publisher }</li>

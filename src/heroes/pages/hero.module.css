@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
-
 .hero-detail {
     display: flex;
     border-radius: 12px;
     width: 500px;
-    height: 350px;
+    min-height: 350px;
+    height: auto;
     margin: 30px auto;
     overflow: hidden;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    font-family: 'Daing Script', cursive;
 
     animation: float 3s ease-in-out infinite;
 }
 
 .hero-img {
     width: 40%;
-    height: 100%;
 }
 
 .hero-img img {

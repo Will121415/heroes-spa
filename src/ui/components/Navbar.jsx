@@ -43,7 +43,7 @@ export const Navbar = () => {
                         className="nav-item nav-link" 
                         to="/search"
                     >
-                        Seacrh
+                        Search
                     </NavLink>
                 </div>
             </div>
