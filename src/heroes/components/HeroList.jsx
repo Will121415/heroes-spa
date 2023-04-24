@@ -1,4 +1,4 @@
-import { getHeroesByPublisher } from '../helpers/getHeroesByPublisher';
+import { getHeroesByPublisher } from '../helpers';
 import { HeroCard } from './HeroCard';
 import style from './card.module.css';
 import { useMemo } from 'react';

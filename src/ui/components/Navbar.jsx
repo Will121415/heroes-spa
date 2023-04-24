@@ -6,15 +6,22 @@ import { AuthContext } from '../../auth/context';
 import { HeroBrand } from '../../ui/components/HeroBrand';
 
 import style from './navbar.module.css';
+import { useLocation } from 'react-router-dom';
+
+
+const routes = [
+    { path: '/marvel', label: 'Marvel' },
+    { path: '/dc', label: 'DC' },
+    { path: '/search', label: 'Search' },
+]
 
 
 export const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext);
 
-
     const navigate = useNavigate();
-
+    const { pathname } = useLocation();
 
     const onLogout = () => {
 
@@ -37,30 +44,22 @@ export const Navbar = () => {
 
             <div className={style['navbar-nav']}>
 
-                <NavLink
-                    className="nav-item nav-link"
-                    to="/marvel"
-                >
-                    Marvel
-                </NavLink>
-
-                <NavLink
-                    className="nav-item nav-link"
-                    to="/dc"
-                >
-                    DC
-                </NavLink>
-                <NavLink
-                    className="nav-item nav-link"
-                    to="/search"
-                >
-                    Search
-                </NavLink>
+                {
+                    routes.map(({path, label}) => (
+                        <NavLink
+                            key={path}
+                            className={`${path === pathname ? style['active'] : ''}`}
+                            to={path}
+                        >
+                            {label}
+                        </NavLink>
+                    ))
+                }
             </div>
 
             <div className={style['navbar-end']}>
                 <span className={style['navbar-user']}>
-                    {user?.name}
+                    @{user?.name}
                 </span>
                 <button
                     onClick={onLogout}

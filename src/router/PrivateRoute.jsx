@@ -14,7 +14,6 @@ export const PrivateRoute = ({ children }) => {
 
     useEffect(() => {
         localStorage.setItem('lastpath', lastPath);
-         console.log(lastPath);
 
     },[pathname, search])
 

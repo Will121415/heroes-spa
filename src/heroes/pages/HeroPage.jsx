@@ -1,4 +1,4 @@
-import { getHeroById } from '../helpers/getHeroesById';
+import { getHeroById } from '../helpers';
 import { useHero } from '../hooks/useHero';
 import style from './hero.module.css';
 

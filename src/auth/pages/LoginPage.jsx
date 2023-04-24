@@ -11,7 +11,7 @@ export const LoginPage = () => {
 
   const onLogin = () => {
 
-    login('Mora Will');
+    login('willmodev');
 
     const lastPath = localStorage.getItem('lastpath') || '/';
 
