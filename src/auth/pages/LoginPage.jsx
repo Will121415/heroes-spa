@@ -21,13 +21,13 @@ export const LoginPage = () => {
   }
 
   return (
-    <div className='container my-5'>
+    <div className='container'>
       <h1>Login Page</h1>
       <hr />
 
       <button 
         onClick={ onLogin }
-        className='btn btn-primary'>
+        className='container btn-outline'>
           Login
       </button>
     </div>

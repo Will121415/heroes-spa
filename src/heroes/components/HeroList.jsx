@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { getHeroesByPublisher } from '../helpers/getHeroesByPublisher';
 import { HeroCard } from './HeroCard';
 import style from './card.module.css';

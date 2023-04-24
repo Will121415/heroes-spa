@@ -3,10 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../auth/context';
 
+import { HeroBrand } from '../../ui/components/HeroBrand';
+
+import style from './navbar.module.css';
+
 
 export const Navbar = () => {
 
-    const { user, logout } = useContext( AuthContext );
+    const { user, logout } = useContext(AuthContext);
 
 
     const navigate = useNavigate();
@@ -22,52 +26,48 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
-            
-            <Link 
-                className="navbar-brand" 
+        <nav className={style['navbar']}>
+
+            <Link
+                className={style['navbar-brand']}
                 to="/"
             >
-                Asociaciones
+                <HeroBrand />
             </Link>
 
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
+            <div className={style['navbar-nav']}>
 
-                    <NavLink 
-                        className="nav-item nav-link" 
-                        to="/marvel"
-                    >
-                        Marvel
-                    </NavLink>
+                <NavLink
+                    className="nav-item nav-link"
+                    to="/marvel"
+                >
+                    Marvel
+                </NavLink>
 
-                    <NavLink 
-                        className="nav-item nav-link" 
-                        to="/dc"
-                    >
-                        DC
-                    </NavLink>
-                    <NavLink 
-                        className="nav-item nav-link" 
-                        to="/search"
-                    >
-                        Search
-                    </NavLink>
-                </div>
+                <NavLink
+                    className="nav-item nav-link"
+                    to="/dc"
+                >
+                    DC
+                </NavLink>
+                <NavLink
+                    className="nav-item nav-link"
+                    to="/search"
+                >
+                    Search
+                </NavLink>
             </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-primary'>
-                        { user?.name }
-                    </span>
-                    <button
-                        onClick={ onLogout } 
-                        className='nav-item nav-link btn btn-outline-primary'
-                    >
-                        Logout
-                    </button>
-                </ul>
+            <div className={style['navbar-end']}>
+                <span className={style['navbar-user']}>
+                    {user?.name}
+                </span>
+                <button
+                    onClick={onLogout}
+                    className='btn-outline'
+                >
+                    Logout
+                </button>
             </div>
         </nav>
     )

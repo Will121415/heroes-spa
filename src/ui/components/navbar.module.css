@@ -1,0 +1,42 @@
+.navbar, .navbar-nav {
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    padding: 10px 20px;
+    align-items: center;
+    width: 100vw;
+}
+
+.navbar-nav {
+    padding: 0;
+}
+
+.navbar-end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.navbar-user {
+    color: tomato;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: tomato;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar-brand {
+        display: none;
+    }
+}

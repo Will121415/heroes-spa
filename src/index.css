@@ -1,13 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
- 
- 
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
 
- body {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Daing Script', cursive;
 
- }
+}
+
+.container {
+  margin: 10px 20px;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid tomato;
+  background-color: white;
+  font-family: 'Daing Script', cursive;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-outline:hover {
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+
+hr {
+  margin-top: 2px;
+}
